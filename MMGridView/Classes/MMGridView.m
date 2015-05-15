@@ -99,7 +99,7 @@
         NSInteger noOfRows = self.numberOfRows;
         NSUInteger cellsPerPage = self.numberOfColumns * self.numberOfRows;
         
-        BOOL isLandscape = UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]);
+        BOOL isLandscape = UIInterfaceOrientationIsLandscape((UIInterfaceOrientation)[[UIDevice currentDevice] orientation]);
         if (isLandscape) {
             // In landscape mode switch rows and columns
             noOfCols = self.numberOfRows;
@@ -120,7 +120,7 @@
         for (NSInteger i = 0; i < [self.dataSource numberOfCellsInGridView:self]; i++) {
             MMGridViewCell *cell = [self.dataSource gridView:self cellAtIndex:i];
             [cell performSelector:@selector(setGridView:) withObject:self];
-            [cell performSelector:@selector(setIndex:) withObject:[NSNumber numberWithInt:i]];
+            [cell setIndex:i];
          
             NSInteger page = (int)floor((float)i / (float)cellsPerPage);
             NSInteger row  = (int)floor((float)i / (float)noOfCols) - (page * noOfRows);

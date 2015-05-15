@@ -23,9 +23,6 @@
 #import "MMGridView.h"
 
 
-@interface MMGridViewCell()
-@property (weak, nonatomic) MMGridView *gridView;
-@end
 
 
 @implementation MMGridViewCell
@@ -45,10 +42,6 @@
 }
 
 
-- (void)setIndex:(NSNumber *)theIndex
-{
-    index = [theIndex intValue];
-}
 
 // ----------------------------------------------------------------------------------
 
@@ -76,7 +69,7 @@
                 break;
                 
             case 2:
-                [gridView performSelector:doubleTapSelector withObject:self];
+                [gridView performSelector:doubleTapSelector withObject:self afterDelay:0];
                 break;
                               
             default:

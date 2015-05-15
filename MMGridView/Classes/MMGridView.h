@@ -68,5 +68,7 @@
 @property (nonatomic, readonly) NSUInteger numberOfPages;
 
 - (void)reloadData;
+- (void)cellWasSelected:(MMGridViewCell *)cell;
+- (void)cellWasDoubleTapped:(MMGridViewCell *)cell;
 
 @end

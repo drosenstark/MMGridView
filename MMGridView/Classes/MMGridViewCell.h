@@ -24,12 +24,8 @@
 @class MMGridView;
 
 @interface MMGridViewCell : UIView 
-{
-    MMGridView *__weak gridView;
-    NSInteger index;
-}
 
-@property (weak, nonatomic, readonly) MMGridView *gridView;
-@property (nonatomic, readonly) NSInteger index;
+@property (weak, nonatomic) MMGridView *gridView;
+@property (nonatomic, assign) NSInteger index;
 
 @end
