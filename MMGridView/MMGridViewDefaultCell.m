@@ -24,12 +24,6 @@
 
 @implementation MMGridViewDefaultCell
 
-@synthesize textLabel;
-@synthesize textLabelBackgroundView;
-@synthesize backgroundView;
-@synthesize imageView;
-
-
 
 - (id)initWithFrame:(CGRect)frame 
 {

@@ -25,10 +25,6 @@
 
 @interface MMGridViewDefaultCell : MMGridViewCell 
 {
-    UILabel *textLabel;
-    UIView *textLabelBackgroundView;
-    UIView *backgroundView;
-    UIImageView *imageView;
 }
 
 @property (nonatomic, strong) UILabel *textLabel;
