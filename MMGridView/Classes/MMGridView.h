@@ -66,6 +66,7 @@
 @property (nonatomic) NSUInteger cellMargin;
 @property (nonatomic, readonly) NSUInteger currentPageIndex;
 @property (nonatomic, readonly) NSUInteger numberOfPages;
+@property (nonatomic, weak) UIView *modalCover;
 
 - (void)reloadData;
 - (void)cellWasSelected:(MMGridViewCell *)cell;
